@@ -1,6 +1,5 @@
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
-
 from main.models.about import About
 from main.serializers import AboutSerializer
 
