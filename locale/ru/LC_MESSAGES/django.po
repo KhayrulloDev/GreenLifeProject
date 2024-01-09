@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-09 07:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: main/apps.py:8
+msgid "main"
+msgstr "основной"
+
+#: main/models/about.py:6
+msgid "Text"
+msgstr "Текст"
+
+#: main/models/about.py:9
+msgid "About"
+msgstr "О нас"
+
+#: main/models/about.py:10
+msgid "Abouts"
+msgstr "О нас"
+
+#: main/models/blogs.py:6
+msgid "Title"
+msgstr "Заголовок"
+
+#: main/models/blogs.py:7 main/models/product.py:13
+msgid "Description"
+msgstr "Описание"
+
+#: main/models/blogs.py:8 main/models/partner.py:7
+msgid "Image"
+msgstr "Изображение"
+
+#: main/models/blogs.py:9
+msgid "You Tube link"
+msgstr "ссылка на ютуб"
+
+#: main/models/blogs.py:12
+msgid "Blog"
+msgstr "Блог"
+
+#: main/models/blogs.py:13
+msgid "Blogs"
+msgstr "Блоги"
+
+#: main/models/category.py:7 main/models/contact.py:7 main/models/partner.py:6
+#: main/models/product.py:8
+msgid "Name"
+msgstr "Имя"
+
+#: main/models/category.py:8
+msgid "Parent"
+msgstr ""
+
+#: main/models/category.py:11 main/models/product.py:12
+msgid "Category"
+msgstr "Категория"
+
+#: main/models/category.py:12
+msgid "Categories"
+msgstr "Категории"
+
+#: main/models/contact.py:8
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: main/models/contact.py:9
+msgid "Email"
+msgstr "Электронная почта"
+
+#: main/models/contact.py:10
+msgid "Message"
+msgstr "Сообщение"
+
+#: main/models/contact.py:13
+msgid "Contact"
+msgstr "Контакт"
+
+#: main/models/contact.py:14
+msgid "Contacts"
+msgstr "Контакты"
+
+#: main/models/file.py:7 main/models/file.py:11
+msgid "File"
+msgstr "Файл"
+
+#: main/models/file.py:8
+msgid "Product ID"
+msgstr "Код товара"
+
+#: main/models/file.py:12
+msgid "Files"
+msgstr "Файлы"
+
+#: main/models/partner.py:8
+msgid "Country"
+msgstr "Страна"
+
+#: main/models/partner.py:11
+msgid "Partner"
+msgstr "Партнер"
+
+#: main/models/partner.py:12
+msgid "Partners"
+msgstr "Партнеры"
+
+#: main/models/product.py:9
+msgid "Price"
+msgstr "Цена"
+
+#: main/models/product.py:10
+msgid "Productivity"
+msgstr "Производительность"
+
+#: main/models/product.py:11
+msgid "Organization"
+msgstr "Организация"
+
+#: main/models/product.py:14
+msgid "Partner ID"
+msgstr "Партнер ID"
+
+#: main/models/product.py:15
+msgid "Category ID"
+msgstr "Категория ID"
+
+#: main/models/product.py:18
+msgid "Product"
+msgstr "Продукт"
+
+#: main/models/product.py:19
+msgid "Products"
+msgstr "Продукты"
