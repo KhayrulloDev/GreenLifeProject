@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import GetPartner, ProductByPartner
+from .views.about import AboutGenericAPIView
 from .views.blogs import BlogListGenericAPIView, BlogDetailGenericAPIView
 from .views.categories import CategoryGenericAPIView, CategoryListGenericAPIView
 from .views.products import ProductWithCategoryGenericAPIView, ContactGenericAPIView, ProductGenericAPIView
@@ -15,4 +16,5 @@ urlpatterns = [
     path('blog-detail<int:pk>', BlogDetailGenericAPIView.as_view(), name='blog_detail'),
     path('get-partners', GetPartner.as_view(), name='partners'),
     path('partnerproduct<int:pk>', ProductByPartner.as_view(), name='partner-products'),
+    path('about', AboutGenericAPIView.as_view(), name='about'),
 ]

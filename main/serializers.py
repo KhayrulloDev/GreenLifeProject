@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from .models import Partner, Product, Contact, Category, Blog
+from .models.about import About
 
 
 class CategorySerializer(ModelSerializer):
@@ -46,4 +47,11 @@ class BlogDetailSerializer(ModelSerializer):
 
     class Meta:
         model = Blog
+        fields = '__all__'
+
+
+class AboutSerializer(ModelSerializer):
+
+    class Meta:
+        model = About
         fields = '__all__'
