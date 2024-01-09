@@ -153,10 +153,6 @@ dmypy.json
 cython_debug/
 
 
-/media/
-*/media
-media/
-
 */migrations/
 /migrations/
 migrations/
