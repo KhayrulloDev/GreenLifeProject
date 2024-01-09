@@ -66,4 +66,3 @@ class ContactGenericAPIView(GenericAPIView):
         except Exception as e:
             return Response({"message": str(e)}, status=404)
         return Response(serializer.data)
-
