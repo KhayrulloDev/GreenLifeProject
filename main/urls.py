@@ -13,8 +13,8 @@ urlpatterns = [
     path('products/<int:category_id>', ProductWithCategoryGenericAPIView.as_view(), name='products'),
     path('contact', ContactGenericAPIView.as_view(), name='contact'),
     path('blog-list', BlogListGenericAPIView.as_view(), name='blog_list'),
-    path('blog-detail<int:pk>', BlogDetailGenericAPIView.as_view(), name='blog_detail'),
+    path('blog-detail/<int:pk>', BlogDetailGenericAPIView.as_view(), name='blog_detail'),
     path('get-partners', GetPartner.as_view(), name='partners'),
-    path('partnerproduct<int:pk>', ProductByPartner.as_view(), name='partner-products'),
+    path('partnerproduct/<int:pk>', ProductByPartner.as_view(), name='partner-products'),
     path('about', AboutGenericAPIView.as_view(), name='about'),
 ]
