@@ -1,7 +1,6 @@
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
-
-from main.models import Partner, Product
+from main.models import Partner, Product, File
 from main.serializers import PartnerSerializer, ProductSerializer
 
 
@@ -23,5 +22,10 @@ class ProductByPartner(GenericAPIView):
 
     def get(self, request, pk):
         products = self.get_queryset()
+        for product in products:
+            try:
+                product['image'] = 'http://206.189.150.181' + File.objects.get(product_id=product['id']).file.url
+            except File.DoesNotExist:
+                pass
         serialized = self.get_serializer(products, many=True)
         return Response(serialized.data)
