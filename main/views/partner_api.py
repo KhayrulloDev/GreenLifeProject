@@ -24,7 +24,8 @@ class ProductByPartner(GenericAPIView):
         products = self.get_queryset()
         for product in products:
             try:
-                product['image'] = 'http://206.189.150.181' + File.objects.get(product_id=product.id).file.url
+                file_instance = File.objects.get(product_id=product.id)
+                product['image'] = 'http://206.189.150.181' + file_instance.file.url
             except File.DoesNotExist:
                 pass
         serialized = self.get_serializer(products, many=True)
