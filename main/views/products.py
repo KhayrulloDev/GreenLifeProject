@@ -44,7 +44,7 @@ class ProductGenericAPIView(GenericAPIView):
             files = File.objects.filter(product_id=product_id)
             if files.exists():
                 image = files.first().file.url
-                serialized_data['image'] = 'http://206.189.150.181' + image
+                serialized_data['image'] = image
             else:
                 serialized_data['image'] = None
 
