@@ -44,7 +44,7 @@ class ProductGenericAPIView(GenericAPIView):
             files = File.objects.filter(product_id=product_id)
             if files.exists():
                 image = files.first().file.url
-                serialized_data['image'] = 'https://greenlifeseeds-uz.onrender.com' + image
+                serialized_data['image'] = image
             else:
                 serialized_data['image'] = None
 
