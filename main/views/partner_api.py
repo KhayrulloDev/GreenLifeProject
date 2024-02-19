@@ -43,7 +43,7 @@ class ProductByPartner(GenericAPIView):
                         "description": product['description'],
                         "description_uz": product['description_uz'],
                         "description_ru": product['description_ru'],
-                        "image": "http://206.189.150.181" + File.objects.get(product_id=product['id']).file.url,
+                        "image": File.objects.get(product_id=product['id']).file.url,
                         "partner_id": product['partner_id'],
                         "category_id": product['category_id'],
                       }
