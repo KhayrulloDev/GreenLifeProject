@@ -1,7 +1,9 @@
+from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from main.models import Product, File
 from main.serializers import ProductSerializer, ContactSerializer, ProductWithCategory
+import random
 
 
 class ProductWithCategoryGenericAPIView(GenericAPIView):
@@ -66,3 +68,18 @@ class ContactGenericAPIView(GenericAPIView):
         except Exception as e:
             return Response({"message": str(e)}, status=404)
         return Response(serializer.data)
+
+
+class ProductListAPIView(GenericAPIView):
+    serializer_class = ProductSerializer
+
+    def get(self, request):
+        products = Product.objects.all().order_by('?')[:30]
+        serializer = self.get_serializer(products, many=True)
+        data = serializer.data
+        for product in data:
+            images = File.objects.filter(product_id=product['id'])
+            if images.exists():
+                image = images.first().file.url
+                product['images'] = image
+        return Response(data, status=status.HTTP_200_OK)
