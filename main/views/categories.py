@@ -10,7 +10,7 @@ class CategoryGenericAPIView(GenericAPIView):
     def get(self, request, pk):
         try:
             categories = Category.objects.filter(pk=pk).first()
-            serializer = self.get_serializer(categories, many=True)
+            serializer = self.get_serializer(categories)
         except Exception as e:
             return Response({"message": str(e)}, status=404)
         return Response(serializer.data)
