@@ -81,5 +81,5 @@ class ProductListAPIView(GenericAPIView):
             images = File.objects.filter(product_id=product['id'])
             if images.exists():
                 image = images.first().file.url
-                product['images'] = image
+                product['image'] = image
         return Response(data, status=status.HTTP_200_OK)
