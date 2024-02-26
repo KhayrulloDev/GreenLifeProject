@@ -330,5 +330,5 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # CSP_SCRIPT_SRC = ("'self'", "https://greenlifeseeduz.s3.amazonaws.com")
 # Example CSP settings
 CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "https://greenlifeseeduz.s3.amazonaws.com")
+CSP_SCRIPT_SRC = ("'self'", "*")
 
