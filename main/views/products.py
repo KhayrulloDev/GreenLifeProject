@@ -74,12 +74,12 @@ class ProductListAPIView(GenericAPIView):
     serializer_class = ProductSerializer
 
     def get(self, request):
-        products = Product.objects.all().order_by('?')[:30]
+        products = Product.objects.all().order_by('?')[:20]
         serializer = self.get_serializer(products, many=True)
         data = serializer.data
         for product in data:
             images = File.objects.filter(product_id=product['id'])
             if images.exists():
                 image = images.first().file.url
-                product['images'] = image
+                product['image'] = image
         return Response(data, status=status.HTTP_200_OK)
