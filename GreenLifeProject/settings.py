@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'rest_framework',
     'rest_framework_simplejwt',
+    'whitenoise',
 ]
 
 # apps
@@ -47,6 +48,7 @@ INSTALLED_APPS += [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -165,6 +167,8 @@ LOCALE_PATHS = [
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
