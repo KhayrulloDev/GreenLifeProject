@@ -6,23 +6,22 @@ from main.serializers import CategorySerializer
 
 class CategoryGenericAPIView(GenericAPIView):
     serializer_class = CategorySerializer
+    queryset = Category.objects.all()  # Add the queryset attribute
 
     def get(self, request, pk):
         try:
-            categories = Category.objects.filter(pk=pk).first()
-            serializer = self.get_serializer(categories)
-        except Exception as e:
-            return Response({"message": str(e)}, status=404)
+            category = self.get_object()
+            serializer = self.get_serializer(category)
+        except Category.DoesNotExist:
+            return Response({"message": "Category not found"}, status=404)
         return Response(serializer.data)
 
 
 class CategoryListGenericAPIView(GenericAPIView):
     serializer_class = CategorySerializer
+    queryset = Category.objects.all()  # Add the queryset attribute
 
     def get(self, request):
-        try:
-            categories = Category.objects.all()
-            serializer = self.get_serializer(categories, many=True)
-        except Exception as e:
-            return Response({"message": str(e)}, status=404)
+        categories = self.get_queryset()
+        serializer = self.get_serializer(categories, many=True)
         return Response(serializer.data)
